@@ -32,7 +32,7 @@ The application should read from files containing hotel data and booking data, t
    Navigate to the directory containing the .exe. By default, it will be located in `bin/Release/net(your_framework_version_here)/`
 
    ```bash
-   cd bin/Release/net8.0/
+   cd bin/Debug/net8.0/
    ```
 
    Ensure the required JSON files (`hotels.json` and `bookings.json`) are placed in the same directory as the `.exe` file.
