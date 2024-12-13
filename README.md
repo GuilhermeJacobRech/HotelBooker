@@ -19,7 +19,7 @@ The application should read from files containing hotel data and booking data, t
 1. **Clone the Repository**
 
    ```bash
-   git clone github.com/GuilhermeJacobRech/HotelBooker
+   git clone https://github.com/GuilhermeJacobRech/HotelBooker
    ```
 
 2. **Build the Project**
