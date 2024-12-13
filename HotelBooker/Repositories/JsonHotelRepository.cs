@@ -6,13 +6,14 @@ namespace HotelBooker.Repositories
     public class JsonHotelRepository : IHotelRepository
     {
         private readonly List<Hotel> _hotels;
+        private static readonly JsonSerializerOptions s_readOptions = new()
+        {
+            PropertyNameCaseInsensitive = true
+        };
+
         public JsonHotelRepository(string hotelsJson)
         {
-            var options = new JsonSerializerOptions
-            {
-                PropertyNameCaseInsensitive = true
-            };
-            _hotels = JsonSerializer.Deserialize<List<Hotel>>(hotelsJson, options) ?? [];
+            _hotels = JsonSerializer.Deserialize<List<Hotel>>(hotelsJson, s_readOptions) ?? [];
         }
 
         public List<Hotel> GetAll()
