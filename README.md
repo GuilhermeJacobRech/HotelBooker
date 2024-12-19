@@ -29,7 +29,7 @@ The application should read from files containing hotel data and booking data, t
    ```
 
 3. **Run the Program**
-   Navigate to the directory containing the .exe. By default, it will be located in `bin/Release/net(your_framework_version_here)/`
+   Navigate to the directory containing the .exe. By default, it will be located in `bin/Debug/net(your_framework_version_here)/`
 
    ```bash
    cd bin/Debug/net8.0/
