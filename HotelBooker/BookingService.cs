@@ -1,5 +1,6 @@
 ﻿using HotelBooker.Models;
 using HotelBooker.Repositories;
+using System.Diagnostics.CodeAnalysis;
 
 namespace HotelBooker
 {
@@ -12,35 +13,6 @@ namespace HotelBooker
         {
             _hotelRepository = hotelRepository;
             _bookingRepository = bookingRepository;
-        }
-
-        /// <summary>
-        /// Validates user input.
-        /// </summary>
-        /// <param name="userInput"></param>
-        /// <returns></returns>
-        public bool IsUserInputValid(UserInput? userInput)
-        {
-            if (userInput is not null)
-            {
-                // Check if hotel exists
-                var hotel = _hotelRepository.GetHotelById(userInput.HotelId);
-                if (hotel is not null)
-                {
-                    // Check if room type exists in hotel
-                    var roomType = _hotelRepository.GetRoomType(userInput.HotelId, userInput.RoomTypeCode);
-                    if (roomType is not null)
-                    {
-                        // Check if arrival is earlier or equal than departure
-                        if (userInput.Arrival <= userInput.Departure)
-                        {
-                            return true;
-                        }
-                    }
-                }
-            }
-
-            return false;
         }
 
         /// <summary>
