@@ -25,7 +25,7 @@ namespace HotelBooker.Utils
         /// </summary>
         /// <param name="userInput"></param>
         /// <returns></returns>
-        public bool IsUserInputValid(UserInput? userInput)
+        public bool IsUserInputValid([NotNullWhen(true)]UserInput? userInput)
         {
             if (userInput is not null)
             {
